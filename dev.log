@@ -1,0 +1,37 @@
+
+> dev
+> vite --port 3000
+
+
+  VITE v5.4.19  ready in 117 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.20.0.24:3000/
+6:43:10 AM [vite] hmr update /src/App.tsx
+6:43:11 AM [vite] hmr update /src/App.tsx
+6:43:28 AM [vite] hmr update /src/App.tsx
+6:43:28 AM [vite] hmr update /src/App.tsx
+6:43:38 AM [vite] hmr update /src/App.tsx
+6:43:39 AM [vite] hmr update /src/App.tsx
+6:43:54 AM [vite] hmr update /src/App.tsx
+6:43:55 AM [vite] hmr update /src/App.tsx
+6:44:33 AM [vite] hmr update /src/App.tsx
+6:44:33 AM [vite] hmr update /src/App.tsx
+6:44:49 AM [vite] hmr update /src/App.tsx
+6:44:49 AM [vite] hmr update /src/App.tsx
+6:45:03 AM [vite] hmr update /src/App.tsx
+6:45:04 AM [vite] hmr update /src/App.tsx
+6:45:12 AM [vite] hmr update /src/App.tsx
+6:45:13 AM [vite] hmr update /src/App.tsx
+6:45:23 AM [vite] hmr update /src/App.tsx
+6:45:23 AM [vite] hmr update /src/App.tsx
+6:45:33 AM [vite] hmr update /src/App.tsx
+6:45:34 AM [vite] hmr update /src/App.tsx
+6:45:55 AM [vite] hmr update /src/App.tsx
+6:45:55 AM [vite] hmr update /src/App.tsx
+6:51:31 AM [vite] hmr update /src/App.tsx
+6:51:31 AM [vite] hmr update /src/App.tsx
+6:51:45 AM [vite] hmr update /src/App.tsx
+6:51:45 AM [vite] hmr update /src/App.tsx
+6:51:52 AM [vite] hmr update /src/App.tsx
+6:51:52 AM [vite] hmr update /src/App.tsx
