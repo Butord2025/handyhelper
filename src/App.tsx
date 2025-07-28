@@ -127,6 +127,7 @@ const App: React.FC = () => {
   const [showRegistration, setShowRegistration] = useState(false);
   const [showTaskModal, setShowTaskModal] = useState(false);
   const [selectedService, setSelectedService] = useState<number | null>(null);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [taskData, setTaskData] = useState({
     title: '',
     description: '',
@@ -227,7 +228,10 @@ const App: React.FC = () => {
               >
                 Тарифи
               </button>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              <button 
+                onClick={() => setIsLoginModalOpen(true)}
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              >
                 Увійти
               </button>
             </div>
@@ -873,6 +877,90 @@ const App: React.FC = () => {
                   Створити завдання
                   <PlusIcon className="w-4 h-4" />
                 </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Login Modal */}
+      {isLoginModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-8 w-full max-w-md mx-4">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-2xl font-bold text-gray-800">Вхід до системи</h2>
+              <button
+                onClick={() => setIsLoginModalOpen(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              alert('Функція входу буде реалізована в наступній версії');
+              setIsLoginModalOpen(false);
+            }}>
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email або телефон
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Введіть email або номер телефону"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Пароль
+                  </label>
+                  <input
+                    type="password"
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Введіть пароль"
+                  />
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <label className="flex items-center">
+                    <input type="checkbox" className="rounded" />
+                    <span className="ml-2 text-sm text-gray-600">Запам'ятати мене</span>
+                  </label>
+                  <a href="#" className="text-sm text-blue-600 hover:text-blue-800">
+                    Забули пароль?
+                  </a>
+                </div>
+              </div>
+              
+              <div className="mt-6 space-y-3">
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Увійти
+                </button>
+                
+                <div className="text-center">
+                  <span className="text-sm text-gray-600">
+                    Ще немає акаунта?{' '}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setIsLoginModalOpen(false);
+                        setShowRegistration(true);
+                      }}
+                      className="text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                      Зареєструватися
+                    </button>
+                  </span>
+                </div>
               </div>
             </form>
           </div>
